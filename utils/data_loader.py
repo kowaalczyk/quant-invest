@@ -1,11 +1,22 @@
 import pandas as pd
 
+from typing import List, Tuple
+import os
+from pathlib import Path
+
 
 FUNDS_CSV = 'input/Quant_Invest_Fundusze.csv'
 STOCKS_CSV = 'input/all_indices_close.csv'
 COMMODITIES_CSV = 'input/all_commodities_close.csv'
 RATES_CSV = 'input/policy_rates.csv'
 FX_CSV = 'input/exchange_rates.csv'
+
+STOOQ_DIR = Path('input/stooq_selected/')
+STOOQ_CSVS = [
+    STOOQ_DIR / fname 
+    for fname in os.listdir(STOOQ_DIR)
+    if fname[-3:] == 'csv'
+]
 
 
 def _load_indexed(path, index_col='Daty', sep=',') -> pd.DataFrame:
@@ -52,3 +63,10 @@ def load_all() -> pd.DataFrame:
         load_rates(),
         load_fx()
     ], axis='columns')
+
+
+def load_stooq() -> List[Tuple[pd.DataFrame, str]]:
+    return [
+        (_load_indexed(csv, index_col='Data', sep=';'), csv.stem)
+        for csv in STOOQ_CSVS
+    ]
