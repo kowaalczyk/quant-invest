@@ -1,7 +1,7 @@
 # Quant Invest Contest Submission
-The submission for Quant Invest competition (1st stage).
+The winning submission for Quant Invest competition.
 
-For more details, see [our report](Report.pdf).
+For more details, see [our report](Report.pdf) or [the summary notebook](Summary.ipynb).
 
 © Mikołaj Ostrzołek, Krzysztof Kowalczyk 2019
 
