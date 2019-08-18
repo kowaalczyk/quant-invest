@@ -1,7 +1,7 @@
 # Quant Invest Contest Submission
 The winning submission for Quant Invest competition.
 
-For more details, see [our report](Report.pdf) or [the summary notebook](Summary.ipynb).
+For more details, see [presentation slides](Slides.pdf),  [our report](Report.pdf) or [the summary notebook](Summary.ipynb).
 
 © Mikołaj Ostrzołek, Krzysztof Kowalczyk 2019
 
